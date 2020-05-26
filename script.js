@@ -22,6 +22,10 @@ function generatePassword() {
   // Ask for user input
   enter = parseInt(prompt("How many characters do you want for password? Must be between 8 and 128"))
 
-
+  if (!enter) {
+    alert ("You must enter a value")
+  } else if (enter < 8 || enter > 128) {
+    enter = parseInt(prompt("Choose password lenth of 8 to 128 characters"))
+  }
 }
 
